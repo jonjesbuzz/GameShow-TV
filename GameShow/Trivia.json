@@ -1,0 +1,217 @@
+{
+  "title": "Trivia",
+  "description": "A general trivia game",
+
+  "categories": [
+    {
+      "title": "Movies",
+      "questions": [
+        {
+          "question": "This movie centers on toys that come to life when their owners aren't looking.",
+          "answers": ["Toys", "Toy Story", "The Christmas Toy", "Toy Hunter"],
+          "correctAnswer": 2,
+          "worth": 100
+        },
+        {
+          "question": "Help!  Bring him home from Mars!",
+          "answers": ["The Martian", "Mars", "Mars Attacks!", "Apollo 13"],
+          "correctAnswer": 1,
+          "worth": 200
+        },
+        {
+          "question": "I am Iron Man.",
+          "answers": ["Chris Hemsworth", "Jeremy Renner", "Mark Ruffalo", "Robert Downey Jr."],
+          "correctAnswer": 4,
+          "worth": 300
+        },
+        {
+          "question": "On this young man's quest to take it easy, he takes his two friends out for a day on the city.",
+          "answers": ["The Breakfast Club", "Ferris Bueller's Day Off", "School of Rock", "Napoleon Dynamite"],
+          "correctAnswer": 2,
+          "worth": 400
+        },
+        {
+          "question": "\"We gotta get back to Headquarters\".",
+          "answers": ["Inside Out", "Toy Story 2", "The Incredibles", "The Avengers"],
+          "correctAnswer": 1,
+          "worth": 500
+        }
+      ]
+    },
+    {
+      "title": "Holidays",
+      "questions": [
+        {
+          "question": "This holiday is celebrated on February 14th.",
+          "answers": ["Valentine's Day", "Christmas", "Groundhog Day", "St. Patrick's Day"],
+          "correctAnswer": 1,
+          "worth": 100
+        },
+        {
+          "question": "Dress up and go get some candy!",
+          "answers": ["President's Day", "Groundhog's Day", "Halloween", "Black Friday"],
+          "correctAnswer": 3,
+          "worth": 200
+        },
+        {
+          "question": "Joy to the World! The Lord is come.",
+          "answers": ["Easter", "New Year's Day", "Christmas", "Good Friday"],
+          "correctAnswer": 3,
+          "worth": 300
+        },
+        {
+          "question": "This day is so called because it traditionally put retailers back into profitability.",
+          "answers": ["Thanksgiving", "Victory Day", "All Saints' Day", "Black Friday"],
+          "correctAnswer": 4,
+          "worth": 400
+        },
+        {
+          "question": "Step on a crack, break your mother's back,",
+          "answers": ["Friday the 13th", "Halloween", "Ash Wednesday", "Black Friday"],
+          "correctAnswer": 1,
+          "worth": 500
+        }
+      ]
+    },
+    {
+      "title": "Music",
+      "questions": [
+        {
+          "question": "This singer didn't want to be all by herself",
+          "answers": ["Celine Dion", "Ariana Grande", "Britney Spears", "Selena Gomez"],
+          "correctAnswer": 1,
+          "worth": 100
+        },
+        {
+          "question": "At their iPhone event, Apple teamed up with this artist to give everyone a free copy of their latest album.",
+          "answers": ["Coldplay", "U2", "Imagine Dragons", "One Direction"],
+          "correctAnswer": 2,
+          "worth": 200
+        },
+        {
+          "question": "All the kids love this Randy Newman song, sung from a cowboy to his astronaut friend.",
+          "answers": ["Cowboy", "Living Without You", "You've Got a Friend In Me", "When She Loved Me"],
+          "correctAnswer": 3,
+          "worth": 300
+        },
+        {
+          "question": "In the United States, A.R. Rahman is best known for this soundtrack song.",
+          "answers": ["Jai Ho", "Maa Tujhe Salaam", "Yeh Jo Des Hai Tera", "Mannipaaya"],
+          "correctAnswer": 1,
+          "worth": 400
+        },
+        {
+          "question": "I don't know why you say goodbye, I say twist and shout.",
+          "answers": ["John Legend", "The Monkees", "Elvis Presley", "The Beatles"],
+          "correctAnswer": 4,
+          "worth": 500
+        }
+      ]
+    },
+    {
+      "title": "Science",
+      "questions": [
+        {
+          "question": "Two hydrogen molecules for every one oxygen molecule make up this essential substance for life.",
+          "answers": ["Gasoline", "Water", "Air", "Fire"],
+          "correctAnswer": 2,
+          "worth": 100
+        },
+        {
+          "question": "Scientists can determine that dinosaurs existed by hunting for these.",
+          "answers": ["Fossils", "Rocks", "Dirt", "Water Molecules"],
+          "correctAnswer": 1,
+          "worth": 200
+        },
+        {
+          "question": "Falling apples led to the discovery of physical laws by this famous scientist.",
+          "answers": ["Albert Einstein", "Elon Musk", "Nikola Tesla", "Sir Issac Newton"],
+          "correctAnswer": 4,
+          "worth": 300
+        },
+        {
+          "question": "This law states that the number of transistors in a computer chip doubles approximately every two years.",
+          "answers": ["Murphy's law", "Moore's law", "Newton's law", "Amdahl's law"],
+          "correctAnswer": 2,
+          "worth": 400
+        },
+        {
+          "question": "Science dictates that results must be this.",
+          "answers": ["Repeatable", "Overridable", "Expendable", "Interruptible"],
+          "correctAnswer": 1,
+          "worth": 500
+        }
+      ]
+    },
+    {
+      "title": "U.S. History",
+      "questions": [
+        {
+          "question": "December 7, 1941 will live in infamy.",
+          "answers": ["The Japanese attack Pearl Harbor.", "Captain America joins the Army.", "The Great Depression started.", "The Berlin Wall falls."],
+          "correctAnswer": 1,
+          "worth": 100
+        },
+        {
+          "question": "This man is famous for his large signature on the Declaration of Independence.",
+          "answers": ["Thomas Jefferson", "Ronald Reagan", "John Hancock", "George Washington"],
+          "correctAnswer": 3,
+          "worth": 200
+        },
+        {
+          "question": "\"We choose to do [these] things, not because they are easy, but because they are hard.\"",
+          "answers": ["Franklin D. Roosevelt", "John F. Kennedy", "Abraham Lincoln", "Neil Armstrong"],
+          "correctAnswer": 2,
+          "worth": 300
+        },
+        {
+          "question": "Thomas Jefferson's purchase of this land cemented the idea that the President has implied powers not stated in the Constitution.",
+          "answers": ["Louisiana Purchase", "Mexican Cession", "Gadsden Purchase", "Alaska Purchase"],
+          "correctAnswer": 1,
+          "worth": 400
+        },
+        {
+          "question": "The surrender of Lord Cornwallis at this battle led to the British recognizing American Independence.",
+          "answers": ["Battle of Bunker Hill", "Battle of Trenton", "Battle of Long Island", "Battle of Yorktown"],
+          "correctAnswer": 4,
+          "worth": 500
+        }
+      ]
+    },
+    {
+      "title": "Grab Bag",
+      "questions": [
+        {
+          "question": "This emperor decreed that a census be taken of the entire Roman world.",
+          "answers": ["Caesar Augustus", "Tiberius", "Claudius", "Nero"],
+          "correctAnswer": 1,
+          "worth": 100
+        },
+        {
+          "question": "In 1984, this product was announced to the world as the first personal computer.",
+          "answers": ["IBM PC", "Apple Macintosh", "Dell Latitude", "Hewlett-Packard Pavilion"],
+          "correctAnswer": 2,
+          "worth": 200
+        },
+        {
+          "question": "This entrepreneur is known for SpaceX, Tesla Motors, and PayPal.",
+          "answers": ["Mark Zuckerberg", "Elon Musk", "Steve Jobs", "Bill Gates"],
+          "correctAnswer": 2,
+          "worth": 300
+        },
+        {
+          "question": "Boston's first professional baseball team is now known as this.",
+          "answers": ["San Francisco Giants", "Cincinnati Reds", "Boston Red Sox", "Atlanta Braves"],
+          "correctAnswer": 4,
+          "worth": 400
+        },
+        {
+          "question": "This bird is known as Columbidae.",
+          "answers": ["Eagle", "Owl", "Pigeon", "Sparrow"],
+          "correctAnswer": 3,
+          "worth": 500
+        }
+      ]
+    }
+  ]
+}

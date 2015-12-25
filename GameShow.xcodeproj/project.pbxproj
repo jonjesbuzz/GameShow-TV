@@ -7,13 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB26FB3D1C2C5A650028A0DE /* QuestionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FB3C1C2C5A650028A0DE /* QuestionSet.swift */; };
+		AB26FB401C2C5BDB0028A0DE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FB3F1C2C5BDB0028A0DE /* Category.swift */; };
+		AB26FB421C2C5BE70028A0DE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FB411C2C5BE70028A0DE /* Question.swift */; };
+		AB26FB451C2C5FD90028A0DE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB26FB441C2C5FD90028A0DE /* SwiftyJSON.framework */; };
+		AB26FB471C2C5FE30028A0DE /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB26FB441C2C5FD90028A0DE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AB26FB4A1C2C7A1B0028A0DE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FB491C2C7A1B0028A0DE /* Game.swift */; };
+		AB26FB4C1C2C7B420028A0DE /* PlayerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FB4B1C2C7B420028A0DE /* PlayerProfile.swift */; };
+		AB26FB4E1C2C7C1E0028A0DE /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FB4D1C2C7C1E0028A0DE /* QuestionViewController.swift */; };
+		AB7A8B3C1C2CDF2E000A507C /* Trivia.json in Resources */ = {isa = PBXBuildFile; fileRef = AB7A8B3B1C2CDF2E000A507C /* Trivia.json */; };
 		ABE25B961C2B9DF8004FBE61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE25B951C2B9DF8004FBE61 /* AppDelegate.swift */; };
 		ABE25B981C2B9DF8004FBE61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE25B971C2B9DF8004FBE61 /* ViewController.swift */; };
 		ABE25B9B1C2B9DF8004FBE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE25B991C2B9DF8004FBE61 /* Main.storyboard */; };
 		ABE25B9D1C2B9DF8004FBE61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE25B9C1C2B9DF8004FBE61 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AB26FB481C2C5FE30028A0DE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AB26FB471C2C5FE30028A0DE /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AB26FB3C1C2C5A650028A0DE /* QuestionSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionSet.swift; path = Model/QuestionSet.swift; sourceTree = "<group>"; };
+		AB26FB3F1C2C5BDB0028A0DE /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Model/Category.swift; sourceTree = "<group>"; };
+		AB26FB411C2C5BE70028A0DE /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Question.swift; path = Model/Question.swift; sourceTree = "<group>"; };
+		AB26FB441C2C5FD90028A0DE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../Carthage/Build/tvOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		AB26FB491C2C7A1B0028A0DE /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = Model/Game.swift; sourceTree = "<group>"; };
+		AB26FB4B1C2C7B420028A0DE /* PlayerProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerProfile.swift; path = Model/PlayerProfile.swift; sourceTree = "<group>"; };
+		AB26FB4D1C2C7C1E0028A0DE /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		AB7A8B3B1C2CDF2E000A507C /* Trivia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trivia.json; sourceTree = "<group>"; };
 		ABE25B921C2B9DF8004FBE61 /* GameShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE25B951C2B9DF8004FBE61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE25B971C2B9DF8004FBE61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,12 +58,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB26FB451C2C5FD90028A0DE /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB26FB3E1C2C5A690028A0DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB26FB3C1C2C5A650028A0DE /* QuestionSet.swift */,
+				AB26FB3F1C2C5BDB0028A0DE /* Category.swift */,
+				AB26FB411C2C5BE70028A0DE /* Question.swift */,
+				AB26FB491C2C7A1B0028A0DE /* Game.swift */,
+				AB26FB4B1C2C7B420028A0DE /* PlayerProfile.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AB26FB431C2C5FCD0028A0DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB26FB441C2C5FD90028A0DE /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ABE25B891C2B9DF8004FBE61 = {
 			isa = PBXGroup;
 			children = (
@@ -52,9 +104,13 @@
 		ABE25B941C2B9DF8004FBE61 /* GameShow */ = {
 			isa = PBXGroup;
 			children = (
+				AB7A8B3B1C2CDF2E000A507C /* Trivia.json */,
+				AB26FB431C2C5FCD0028A0DE /* Frameworks */,
+				AB26FB3E1C2C5A690028A0DE /* Model */,
 				ABE25B951C2B9DF8004FBE61 /* AppDelegate.swift */,
 				ABE25B971C2B9DF8004FBE61 /* ViewController.swift */,
 				ABE25B991C2B9DF8004FBE61 /* Main.storyboard */,
+				AB26FB4D1C2C7C1E0028A0DE /* QuestionViewController.swift */,
 				ABE25B9C1C2B9DF8004FBE61 /* Assets.xcassets */,
 				ABE25B9E1C2B9DF8004FBE61 /* Info.plist */,
 			);
@@ -71,6 +127,7 @@
 				ABE25B8E1C2B9DF8004FBE61 /* Sources */,
 				ABE25B8F1C2B9DF8004FBE61 /* Frameworks */,
 				ABE25B901C2B9DF8004FBE61 /* Resources */,
+				AB26FB481C2C5FE30028A0DE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -93,6 +150,7 @@
 				TargetAttributes = {
 					ABE25B911C2B9DF8004FBE61 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 56S7AJ6FDD;
 					};
 				};
 			};
@@ -121,6 +179,7 @@
 			files = (
 				ABE25B9D1C2B9DF8004FBE61 /* Assets.xcassets in Resources */,
 				ABE25B9B1C2B9DF8004FBE61 /* Main.storyboard in Resources */,
+				AB7A8B3C1C2CDF2E000A507C /* Trivia.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,8 +190,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB26FB421C2C5BE70028A0DE /* Question.swift in Sources */,
+				AB26FB4A1C2C7A1B0028A0DE /* Game.swift in Sources */,
 				ABE25B981C2B9DF8004FBE61 /* ViewController.swift in Sources */,
 				ABE25B961C2B9DF8004FBE61 /* AppDelegate.swift in Sources */,
+				AB26FB4C1C2C7B420028A0DE /* PlayerProfile.swift in Sources */,
+				AB26FB3D1C2C5A650028A0DE /* QuestionSet.swift in Sources */,
+				AB26FB4E1C2C7C1E0028A0DE /* QuestionViewController.swift in Sources */,
+				AB26FB401C2C5BDB0028A0DE /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +301,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GameShow",
+				);
 				INFOPLIST_FILE = GameShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cixocommunications.GameShow;
@@ -248,6 +318,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GameShow",
+				);
 				INFOPLIST_FILE = GameShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cixocommunications.GameShow;
@@ -274,6 +349,7 @@
 				ABE25BA31C2B9DF8004FBE61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
