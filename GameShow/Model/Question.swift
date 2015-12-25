@@ -17,7 +17,7 @@ public class Question {
     
     internal weak var category: Category?
     
-    private var state = QuestionState.Unanswered
+    private(set) var state = QuestionState.Unanswered
     
     init(title: String, answers: [String], correctAnswer: Int, worth: Int) throws {
         self.title = title

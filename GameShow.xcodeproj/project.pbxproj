@@ -10,12 +10,12 @@
 		AB26FB3D1C2C5A650028A0DE /* QuestionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FB3C1C2C5A650028A0DE /* QuestionSet.swift */; };
 		AB26FB401C2C5BDB0028A0DE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FB3F1C2C5BDB0028A0DE /* Category.swift */; };
 		AB26FB421C2C5BE70028A0DE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FB411C2C5BE70028A0DE /* Question.swift */; };
-		AB26FB451C2C5FD90028A0DE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB26FB441C2C5FD90028A0DE /* SwiftyJSON.framework */; };
-		AB26FB471C2C5FE30028A0DE /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB26FB441C2C5FD90028A0DE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB26FB4A1C2C7A1B0028A0DE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FB491C2C7A1B0028A0DE /* Game.swift */; };
 		AB26FB4C1C2C7B420028A0DE /* PlayerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FB4B1C2C7B420028A0DE /* PlayerProfile.swift */; };
 		AB26FB4E1C2C7C1E0028A0DE /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FB4D1C2C7C1E0028A0DE /* QuestionViewController.swift */; };
 		AB7A8B3C1C2CDF2E000A507C /* Trivia.json in Resources */ = {isa = PBXBuildFile; fileRef = AB7A8B3B1C2CDF2E000A507C /* Trivia.json */; };
+		AB9515051C2CF1B600F93439 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB26FB441C2C5FD90028A0DE /* SwiftyJSON.framework */; };
+		AB9515061C2CF1B600F93439 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB26FB441C2C5FD90028A0DE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ABE25B961C2B9DF8004FBE61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE25B951C2B9DF8004FBE61 /* AppDelegate.swift */; };
 		ABE25B981C2B9DF8004FBE61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE25B971C2B9DF8004FBE61 /* ViewController.swift */; };
 		ABE25B9B1C2B9DF8004FBE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE25B991C2B9DF8004FBE61 /* Main.storyboard */; };
@@ -23,13 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		AB26FB481C2C5FE30028A0DE /* Embed Frameworks */ = {
+		AB9515071C2CF1B600F93439 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AB26FB471C2C5FE30028A0DE /* SwiftyJSON.framework in Embed Frameworks */,
+				AB9515061C2CF1B600F93439 /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB26FB451C2C5FD90028A0DE /* SwiftyJSON.framework in Frameworks */,
+				AB9515051C2CF1B600F93439 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,8 +109,8 @@
 				AB26FB3E1C2C5A690028A0DE /* Model */,
 				ABE25B951C2B9DF8004FBE61 /* AppDelegate.swift */,
 				ABE25B971C2B9DF8004FBE61 /* ViewController.swift */,
-				ABE25B991C2B9DF8004FBE61 /* Main.storyboard */,
 				AB26FB4D1C2C7C1E0028A0DE /* QuestionViewController.swift */,
+				ABE25B991C2B9DF8004FBE61 /* Main.storyboard */,
 				ABE25B9C1C2B9DF8004FBE61 /* Assets.xcassets */,
 				ABE25B9E1C2B9DF8004FBE61 /* Info.plist */,
 			);
@@ -127,7 +127,7 @@
 				ABE25B8E1C2B9DF8004FBE61 /* Sources */,
 				ABE25B8F1C2B9DF8004FBE61 /* Frameworks */,
 				ABE25B901C2B9DF8004FBE61 /* Resources */,
-				AB26FB481C2C5FE30028A0DE /* Embed Frameworks */,
+				AB9515071C2CF1B600F93439 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,6 +305,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GameShow",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
 				INFOPLIST_FILE = GameShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -322,6 +323,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GameShow",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
 				INFOPLIST_FILE = GameShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

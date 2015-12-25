@@ -14,6 +14,16 @@ class Game: NSObject, QuestionViewControllerDelegate {
     var playerTwo: PlayerProfile
     var currentPlayer: PlayerProfile
     
+    var winnerString: String {
+        if self.playerOne.score > self.playerTwo.score {
+            return "\(playerOne.name) wins!"
+        } else if self.playerOne.score < self.playerTwo.score {
+            return "\(playerTwo.name) wins!"
+        } else {
+            return "It's a draw!"
+        }
+    }
+    
     init(questionSet: QuestionSet, playerOneName: String, playerTwoName: String) {
         self.questionSet = questionSet
         self.playerOne = PlayerProfile(name: playerOneName)

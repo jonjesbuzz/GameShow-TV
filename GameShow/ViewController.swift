@@ -17,15 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var playerTwoScoreLabel: UILabel!
     @IBOutlet var categoryLabels: [UILabel]!
 
-    var completedQuestions = 0 {
-        didSet {
-            if self.completedQuestions == currentGame.questionSet.totalQuestions {
-                let controller = UIAlertController(title: "Winner", message: "Team A wins", preferredStyle: UIAlertControllerStyle.Alert)
-                self.presentViewController(controller, animated: true, completion: nil)
-                controller.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            }
-        }
-    }
+    @IBOutlet var buttons: [UIButton]!
+    var completedQuestions = 0
     
     
     
@@ -41,6 +34,10 @@ class ViewController: UIViewController {
             let index = (label.tag / 10) - 1
             label.text = currentGame.questionSet.categories[index].title
         }
+        for button in buttons {
+            let indices = categoryAndQuestionIndices(button.tag)
+            button.setTitle("\(currentGame.questionSet.categories[indices.category].questions[indices.question].worth)", forState: .Normal)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -48,6 +45,11 @@ class ViewController: UIViewController {
         currentPlayerLabel.text = "Current Player: \(currentGame.currentPlayer.name)"
         self.playerOneScoreLabel.text = "\(currentGame.playerOne.name): \(currentGame.playerOne.score)"
         self.playerTwoScoreLabel.text = "\(currentGame.playerTwo.name): \(currentGame.playerTwo.score)"
+        if self.completedQuestions == currentGame.questionSet.totalQuestions {
+            let controller = UIAlertController(title: "Winner", message: currentGame.winnerString, preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(controller, animated: true, completion: nil)
+            controller.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +59,7 @@ class ViewController: UIViewController {
 
     @IBAction func questionButtonPressed(sender: UIButton) {
         sender.enabled = false
+        sender.userInteractionEnabled = false
         self.setNeedsFocusUpdate()
         self.updateFocusIfNeeded()
         self.completedQuestions += 1

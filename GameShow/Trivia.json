@@ -66,7 +66,7 @@
           "worth": 400
         },
         {
-          "question": "Step on a crack, break your mother's back,",
+          "question": "Step on a crack, break your mother's back.",
           "answers": ["Friday the 13th", "Halloween", "Ash Wednesday", "Black Friday"],
           "correctAnswer": 1,
           "worth": 500
