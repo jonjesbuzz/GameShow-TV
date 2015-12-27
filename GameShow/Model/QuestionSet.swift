@@ -12,8 +12,18 @@ import SwiftyJSON
 public class QuestionSet: NSObject {
     private(set) var title: String
     private(set) var questionSetDescription: String
+    private var jsonData: JSON
     
-    var categories: [Category]
+    lazy var categories: [Category] = { [unowned self] in
+        var categories = [Category]()
+        if let cats = self.jsonData["categories"].array {
+            guard cats.count == 6 else { return categories }
+            for cat in cats {
+                categories.append(Category(categoryDict: cat)!)
+            }
+        }
+        return categories
+    }()
     var totalQuestions: Int {
         return categories.reduce(0) { (curr, cat) -> Int in
             return curr + cat.questions.count
@@ -31,13 +41,7 @@ public class QuestionSet: NSObject {
     public init(fileInformation: JSON) {
         self.title = fileInformation["title"].stringValue
         self.questionSetDescription = fileInformation["description"].stringValue
-        categories = [Category]()
-        if let cats = fileInformation["categories"].array {
-            guard cats.count == 6 else { return }
-            for cat in cats {
-                categories.append(Category(categoryDict: cat)!)
-            }
-        }
+        self.jsonData = fileInformation
     }
     
     

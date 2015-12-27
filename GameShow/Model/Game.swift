@@ -9,7 +9,7 @@
 import UIKit
 
 class Game: NSObject, QuestionViewControllerDelegate {
-    var questionSet: QuestionSet
+    var questionSet: QuestionSet?
     var playerOne: PlayerProfile
     var playerTwo: PlayerProfile
     var currentPlayer: PlayerProfile
@@ -24,7 +24,11 @@ class Game: NSObject, QuestionViewControllerDelegate {
         }
     }
     
-    init(questionSet: QuestionSet, playerOneName: String, playerTwoName: String) {
+    convenience init(playerOneName: String, playerTwoName: String) {
+        self.init(questionSet: nil, playerOneName: playerOneName, playerTwoName: playerTwoName)
+    }
+    
+    init(questionSet: QuestionSet?, playerOneName: String, playerTwoName: String) {
         self.questionSet = questionSet
         self.playerOne = PlayerProfile(name: playerOneName)
         self.playerTwo = PlayerProfile(name: playerTwoName)

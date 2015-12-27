@@ -26,17 +26,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if let path = NSBundle.mainBundle().pathForResource("Trivia.json", ofType: nil), qSet = QuestionSet(fileLocation: path) {
-            self.currentGame = Game(questionSet: qSet, playerOneName: "Jonathan", playerTwoName: "Jeshua")
-        }
-        titleLabel.text = self.currentGame.questionSet.title
+//        if let path = NSBundle.mainBundle().pathForResource("Trivia.json", ofType: nil), qSet = QuestionSet(fileLocation: path) {
+//            self.currentGame = Game(questionSet: qSet, playerOneName: "Jonathan", playerTwoName: "Jeshua")
+//        }
+        titleLabel.text = self.currentGame.questionSet!.title
         for label in categoryLabels {
             let index = (label.tag / 10) - 1
-            label.text = currentGame.questionSet.categories[index].title
+            label.text = currentGame.questionSet!.categories[index].title
         }
         for button in buttons {
             let indices = categoryAndQuestionIndices(button.tag)
-            button.setTitle("\(currentGame.questionSet.categories[indices.category].questions[indices.question].worth)", forState: .Normal)
+            button.setTitle("\(currentGame.questionSet!.categories[indices.category].questions[indices.question].worth)", forState: .Normal)
         }
     }
     
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         currentPlayerLabel.text = "Current Player: \(currentGame.currentPlayer.name)"
         self.playerOneScoreLabel.text = "\(currentGame.playerOne.name): \(currentGame.playerOne.score)"
         self.playerTwoScoreLabel.text = "\(currentGame.playerTwo.name): \(currentGame.playerTwo.score)"
-        if self.completedQuestions == currentGame.questionSet.totalQuestions {
+        if self.completedQuestions == currentGame.questionSet!.totalQuestions {
             let controller = UIAlertController(title: "Winner", message: currentGame.winnerString, preferredStyle: UIAlertControllerStyle.Alert)
             self.presentViewController(controller, animated: true, completion: nil)
             controller.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         if segue.identifier == segueToQuestionIdentifier {
             if let sender = sender {
                 let indices = categoryAndQuestionIndices(sender.tag)
-                let question = currentGame.questionSet.questionFor(categoryIndex: indices.category, questionIndex: indices.question)
+                let question = currentGame.questionSet!.questionFor(categoryIndex: indices.category, questionIndex: indices.question)
                 let destination = segue.destinationViewController as! QuestionViewController
                 destination.question = question
                 destination.delegate = currentGame

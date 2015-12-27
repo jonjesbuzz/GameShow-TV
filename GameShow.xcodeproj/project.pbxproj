@@ -20,6 +20,8 @@
 		ABE25B981C2B9DF8004FBE61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE25B971C2B9DF8004FBE61 /* ViewController.swift */; };
 		ABE25B9B1C2B9DF8004FBE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE25B991C2B9DF8004FBE61 /* Main.storyboard */; };
 		ABE25B9D1C2B9DF8004FBE61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE25B9C1C2B9DF8004FBE61 /* Assets.xcassets */; };
+		ABEFA9651C2F77FD00B89D4B /* GameSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFA9641C2F77FD00B89D4B /* GameSetupViewController.swift */; };
+		ABEFA9671C2F7CEA00B89D4B /* QuestionSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFA9661C2F7CEA00B89D4B /* QuestionSetTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +53,8 @@
 		ABE25B9A1C2B9DF8004FBE61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABE25B9C1C2B9DF8004FBE61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABE25B9E1C2B9DF8004FBE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABEFA9641C2F77FD00B89D4B /* GameSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSetupViewController.swift; sourceTree = "<group>"; };
+		ABEFA9661C2F7CEA00B89D4B /* QuestionSetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionSetTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				ABE25B971C2B9DF8004FBE61 /* ViewController.swift */,
 				AB26FB4D1C2C7C1E0028A0DE /* QuestionViewController.swift */,
 				ABE25B991C2B9DF8004FBE61 /* Main.storyboard */,
+				ABEFA9661C2F7CEA00B89D4B /* QuestionSetTableViewController.swift */,
+				ABEFA9641C2F77FD00B89D4B /* GameSetupViewController.swift */,
 				ABE25B9C1C2B9DF8004FBE61 /* Assets.xcassets */,
 				ABE25B9E1C2B9DF8004FBE61 /* Info.plist */,
 			);
@@ -194,6 +200,8 @@
 				AB26FB4A1C2C7A1B0028A0DE /* Game.swift in Sources */,
 				ABE25B981C2B9DF8004FBE61 /* ViewController.swift in Sources */,
 				ABE25B961C2B9DF8004FBE61 /* AppDelegate.swift in Sources */,
+				ABEFA9671C2F7CEA00B89D4B /* QuestionSetTableViewController.swift in Sources */,
+				ABEFA9651C2F77FD00B89D4B /* GameSetupViewController.swift in Sources */,
 				AB26FB4C1C2C7B420028A0DE /* PlayerProfile.swift in Sources */,
 				AB26FB3D1C2C5A650028A0DE /* QuestionSet.swift in Sources */,
 				AB26FB4E1C2C7C1E0028A0DE /* QuestionViewController.swift in Sources */,

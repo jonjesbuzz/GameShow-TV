@@ -1,10 +1,129 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="u15-Sg-8rg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Game Setup View Controller-->
+        <scene sceneID="grh-jd-Cqb">
+            <objects>
+                <viewController id="u15-Sg-8rg" customClass="GameSetupViewController" customModule="GameShow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s27-lw-cup"/>
+                        <viewControllerLayoutGuide type="bottom" id="OsW-H9-SGr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Phe-2F-Zwl">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Game Show!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfm-J6-DeQ">
+                                <rect key="frame" x="677" y="70" width="567" height="91"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2 Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3G-JE-sOh">
+                                <rect key="frame" x="80" y="603" width="1760" height="58"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 1 Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GoP-JI-5XX">
+                                <rect key="frame" x="80" y="419" width="1760" height="58"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vs." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEV-Lb-L10">
+                                <rect key="frame" x="935" y="517" width="50" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5a-Li-lgs">
+                                <rect key="frame" x="872" y="834" width="176" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Start!"/>
+                                <connections>
+                                    <action selector="startGamePressed:" destination="u15-Sg-8rg" eventType="primaryActionTriggered" id="bQq-84-rh6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="GoP-JI-5XX" secondAttribute="trailing" constant="60" id="3XF-3r-Cq4"/>
+                            <constraint firstItem="Kfm-J6-DeQ" firstAttribute="centerX" secondItem="Phe-2F-Zwl" secondAttribute="centerX" id="7dE-U1-xHh"/>
+                            <constraint firstItem="OsW-H9-SGr" firstAttribute="top" secondItem="e5a-Li-lgs" secondAttribute="bottom" constant="160" id="DOY-tQ-qm3"/>
+                            <constraint firstItem="T3G-JE-sOh" firstAttribute="leading" secondItem="Phe-2F-Zwl" secondAttribute="leadingMargin" constant="60" id="NdJ-IQ-WcI"/>
+                            <constraint firstItem="T3G-JE-sOh" firstAttribute="top" secondItem="CEV-Lb-L10" secondAttribute="bottom" constant="40" id="VUz-C0-YxS"/>
+                            <constraint firstItem="e5a-Li-lgs" firstAttribute="centerX" secondItem="Phe-2F-Zwl" secondAttribute="centerX" id="ZLH-TB-aS6"/>
+                            <constraint firstItem="CEV-Lb-L10" firstAttribute="centerX" secondItem="Phe-2F-Zwl" secondAttribute="centerX" id="ZxK-ai-AL3"/>
+                            <constraint firstItem="CEV-Lb-L10" firstAttribute="centerY" secondItem="Phe-2F-Zwl" secondAttribute="centerY" id="jsS-Jy-oeS"/>
+                            <constraint firstItem="Kfm-J6-DeQ" firstAttribute="top" secondItem="s27-lw-cup" secondAttribute="bottom" constant="70" id="rQO-dA-hof"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T3G-JE-sOh" secondAttribute="trailing" constant="60" id="rgD-PX-N4t"/>
+                            <constraint firstItem="CEV-Lb-L10" firstAttribute="top" secondItem="GoP-JI-5XX" secondAttribute="bottom" constant="40" id="rxr-Jn-M5B"/>
+                            <constraint firstItem="GoP-JI-5XX" firstAttribute="leading" secondItem="Phe-2F-Zwl" secondAttribute="leadingMargin" constant="60" id="xNi-pn-BZN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerOneNameField" destination="GoP-JI-5XX" id="BIM-zL-d5v"/>
+                        <outlet property="playerTwoNameField" destination="T3G-JE-sOh" id="TcJ-Ng-l7n"/>
+                        <outlet property="startButton" destination="e5a-Li-lgs" id="105-ZC-WZb"/>
+                        <segue destination="ga4-qg-jfn" kind="show" identifier="selectAQuestionSet" id="Ncj-oH-GeF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCH-oq-NS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1789" y="364"/>
+        </scene>
+        <!--Question Set Table View Controller-->
+        <scene sceneID="fJc-FW-R4K">
+            <objects>
+                <tableViewController id="ga4-qg-jfn" customClass="QuestionSetTableViewController" customModule="GameShow" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="100" sectionHeaderHeight="40" sectionFooterHeight="40" id="4WZ-dK-1fU">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <inset key="scrollIndicatorInsets" minX="80" minY="0.0" maxX="80" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="questionSetCell" textLabel="ubX-Bb-QxR" detailTextLabel="h9k-Qx-Hxp" rowHeight="100" style="IBUITableViewCellStyleValue1" id="QAc-gS-g9C">
+                                <rect key="frame" x="0.0" y="64" width="1920" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QAc-gS-g9C" id="POf-fo-Tc2">
+                                    <rect key="frame" x="0.0" y="0.0" width="1844" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ubX-Bb-QxR">
+                                            <rect key="frame" x="20" y="27" width="72" height="46"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h9k-Qx-Hxp">
+                                            <rect key="frame" x="1716" y="27" width="128" height="46"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ga4-qg-jfn" id="hlN-ni-Bab"/>
+                            <outlet property="delegate" destination="ga4-qg-jfn" id="g0t-Hg-Qcm"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showTriviaBoard" id="ykn-bj-GxF"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6od-Ry-onv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-774" y="1617"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,8 +136,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="Ncm-e8-KBh">
-                                <rect key="frame" x="175" y="185" width="1600" height="726"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="Ncm-e8-KBh">
+                                <rect key="frame" x="160" y="185" width="1600" height="726"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0Fz-KL-4fJ">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="726"/>
@@ -418,26 +537,26 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="QuestionSet.Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atk-39-JgG">
-                                <rect key="frame" x="175" y="60" width="438" height="69"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionSet.Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atk-39-JgG">
+                                <rect key="frame" x="160" y="60" width="438" height="69"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Current Player: :playerName" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbn-bn-4t6">
-                                <rect key="frame" x="1015" y="80" width="732" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Player: :playerName" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbn-bn-4t6">
+                                <rect key="frame" x="1000" y="80" width="760" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSJ-Vk-Asp">
-                                <rect key="frame" x="175" y="967" width="86" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSJ-Vk-Asp">
+                                <rect key="frame" x="160" y="967" width="86" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0il-Af-3X9">
-                                <rect key="frame" x="1661" y="967" width="86" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0il-Af-3X9">
+                                <rect key="frame" x="1674" y="967" width="86" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
