@@ -9,6 +9,8 @@
 import UIKit
 
 let segueToQSet = "selectAQuestionSet"
+let user1NameKey = "com.cixocommunications.GameShow.player1"
+let user2NameKey = "com.cixocommunications.GameShow.player2"
 class GameSetupViewController: UIViewController {
 
     @IBOutlet weak var playerOneNameField: UITextField!
@@ -18,6 +20,13 @@ class GameSetupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let user1 = defaults.stringForKey(user1NameKey) {
+            self.playerOneNameField.text = user1
+        }
+        if let user2 = defaults.stringForKey(user2NameKey) {
+            self.playerTwoNameField.text = user2
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,6 +64,9 @@ class GameSetupViewController: UIViewController {
                name2 = playerTwoNameField.text
         {
             qSetSelector.game = Game(playerOneName: name1, playerTwoName: name2)
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(name1, forKey: user1NameKey)
+            defaults.setObject(name2, forKey: user2NameKey)
         }
     }
 }
